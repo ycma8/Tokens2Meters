@@ -2,7 +2,7 @@
 
 A vision-language model project for 3D object detection from single images.
 
-![Tokens2Meters系统框架图](imgs/fig2.jpg)
+<img src="imgs/fig2.jpg" alt="Tokens2Meters系统框架图" width="70%" style="display: block; margin: 0 auto;">
 
 ## Project Structure
 
