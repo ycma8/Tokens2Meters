@@ -2,6 +2,8 @@
 
 A vision-language model project for 3D object detection from single images.
 
+![Tokens2Meters系统框架图](imgs/fig2.jpg)
+
 ## Project Structure
 
 ```
@@ -31,9 +33,9 @@ cd Tokens2Meters
 ```
 
 ### 2. Install dependencies
+```bash
 conda create -n t2m python=3.12 cuda-toolkit
 conda activate t2m
-```bash
 pip install -r requirements.txt
 ```
 
@@ -80,24 +82,20 @@ modelscope download --model cubeai/blip-image-captioning-base --local_dir ./blip
 ```
 then finetune
 ```bash
-cd src/rag/blip_finetune
-python finetune_lora_nuscenes.py
+python src/rag/blip_finetune/finetune_lora_nuscenes.py
 ```
 create vector db
 ```bash
-cd src/rag/vector_db
-python insert_data.py
+python src/rag/vector_db/insert_data.py
 ```
 use vector db to create rag_eval.jsonl
 ```bash
-cd src/rag/vector_db
-python rag_eval.py
+python src/rag/vector_db/rag_eval.py
 ```
 ### Evaluation
 
 evaluation:use vllm or llamafactory on dataset/nuscenes/rag_eval.jsonl
 
-run src/eval/metrics
 ```bash
 python src/eval/eval_center.py(or other metrics)
 ```
