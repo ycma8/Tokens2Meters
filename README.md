@@ -1,6 +1,6 @@
 # Tokens2Meters
 
-A vision-language model project for 3D object detection from single images.
+Post-Training VLMs with Retrieval-Augmented Generation for Single-Frame 3D Detection.
 
 <img src="imgs/fig2.jpg" alt="Tokens2Meters系统框架图" width="70%" style="display: block; margin: 0 auto;">
 
